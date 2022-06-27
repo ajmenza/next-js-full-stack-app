@@ -2,6 +2,7 @@ import { Text, Flex, HStack, Button } from "@chakra-ui/react";
 import { MenuItem } from "../../molecules/MenuItem/MenuItem";
 import Link from "next/link";
 import React from "react";
+import { signIn } from "next-auth/react"
 
 export const TopBar = () => {
   return (
@@ -26,13 +27,13 @@ export const TopBar = () => {
         >
           SuperApp
         </Text>
-        <HStack spacing="16px" alignContent="center">
+        <HStack spacing="16px" alignContent="center" marginLeft='32px'>
           <MenuItem text="Blog" href="/blog" />
           <MenuItem text="Product" href="/product" />
           <MenuItem text="Pricing" href="/pricing" />
         </HStack>
-        <Flex marginLeft="82px">
-          <Button variant="solid" colorScheme="blue">
+        <Flex marginLeft="32px">
+          <Button variant="solid" colorScheme="blue" onClick={() => signIn()}>
             Get started
           </Button>
         </Flex>
