@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   Flex,
   HStack,
   SimpleGrid,
@@ -14,7 +13,7 @@ export const LandingFooter = () => {
       as="footer"
       backgroundColor="blue.300"
       py="40px"
-      // position="absolute"
+      position="absolute"
       bottom="0"
       width="100vw"
       display="flex"
